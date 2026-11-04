@@ -305,6 +305,23 @@ h3{font:700 21px/1.25 var(--display);letter-spacing:-.015em;margin:0 0 8px}
 .skill-card li:hover{color:var(--text);border-color:var(--c,var(--teal))}
 @media (max-width:1000px){.skills{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.skills{grid-template-columns:1fr}}
+.badges-wrap{margin-top:18px;padding:26px 26px 24px}
+.badges-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.badges-head h3{font-size:19px;margin:0}
+.badges-head span{color:var(--dim);font-size:14px}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gbadge{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:22px 14px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(8,13,28,.55);transition:transform .3s var(--ease),border-color .3s}
+.gbadge:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.medal{position:relative;width:76px;height:76px;display:grid;place-items:center}
+.medal::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from var(--a,0deg),var(--m1),var(--m2),var(--m1));animation:spin 9s linear infinite;opacity:.95}
+.medal::after{content:"";position:absolute;inset:5px;border-radius:50%;background:#0B1328}
+.medal i{position:relative;z-index:1;font-size:32px}
+.medal .chk{position:absolute;z-index:2;right:-2px;bottom:-2px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#05101F;box-shadow:0 0 0 3px #0B1328}
+.medal .chk svg{width:13px;height:13px}
+.gbadge b{font:700 15.5px/1.25 var(--display);letter-spacing:-.01em}
+.gbadge small{color:var(--dim);font-size:12.5px}
+.gbadge:nth-child(1){--m1:#4F8CFF;--m2:#2DD4BF}.gbadge:nth-child(2){--m1:#A78BFA;--m2:#4F8CFF}.gbadge:nth-child(3){--m1:#FB7185;--m2:#FBBF24}.gbadge:nth-child(4){--m1:#2DD4BF;--m2:#FBBF24}
+@media (max-width:900px){.badges{grid-template-columns:1fr 1fr}}
 .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 .cred{padding:22px;display:flex;gap:16px;align-items:flex-start}
 .cred .ico{flex:none;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(79,140,255,.12);color:var(--blue)}
@@ -603,6 +620,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="glass skill-card spot reveal" data-d="1" style="--c:var(--blue)"><h3>IaC &amp; delivery</h3><ul><li>Terraform</li><li>Argo CD</li><li>Kustomize</li><li>Ansible</li><li>GitHub Actions</li><li>Workload Identity Federation</li><li>cosign</li><li>Trivy</li><li>canary releases</li></ul></div>
       <div class="glass skill-card spot reveal" data-d="2" style="--c:var(--violet)"><h3>Kubernetes &amp; SRE</h3><ul><li>KEDA</li><li>HPA</li><li>Kyverno</li><li>NetworkPolicies</li><li>SLOs</li><li>error budgets</li><li>burn-rate alerts</li><li>Prometheus</li><li>Grafana</li><li>Datadog</li><li>PagerDuty</li><li>postmortems</li></ul></div>
       <div class="glass skill-card spot reveal" data-d="3" style="--c:var(--amber)"><h3>Security &amp; networking</h3><ul><li>least privilege</li><li>zero trust</li><li>STRIDE</li><li>Prowler</li><li>CIS benchmarks</li><li>OWASP Top 10</li><li>VPC design</li><li>BGP</li><li>OSPF</li><li>VPN</li><li>TLS</li><li>DNS</li></ul></div>
+    </div>
+    <div class="glass badges-wrap spot reveal">
+      <div class="badges-head"><h3>Certification courses</h3><span>Google Cloud Skills Boost, completed with badges</span></div>
+      <div class="badges">
+        <div class="gbadge reveal" data-d="1"><span class="medal" aria-hidden="true"><i class="devicon-googlecloud-plain colored"></i><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span></span><b>Associate Cloud Engineer</b><small>Badge earned</small></div>
+        <div class="gbadge reveal" data-d="2"><span class="medal" aria-hidden="true"><i class="devicon-googlecloud-plain colored"></i><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span></span><b>Professional Cloud DevOps Engineer</b><small>Badge earned</small></div>
+        <div class="gbadge reveal" data-d="3"><span class="medal" aria-hidden="true"><i class="devicon-googlecloud-plain colored"></i><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span></span><b>DevSecOps / SRE</b><small>Badge earned</small></div>
+        <div class="gbadge reveal" data-d="4"><span class="medal" aria-hidden="true"><i class="devicon-googlecloud-plain colored"></i><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span></span><b>Cloud Digital Leader</b><small>Badge earned</small></div>
+      </div>
     </div>
     <div class="creds">
       <div class="glass cred reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span><div><h3>Certifications</h3><p>Cisco CCNA (2012) · Huawei HCIA 5G Network</p></div></div>
